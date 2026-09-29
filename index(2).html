@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff000">
+  <meta name="description" content="Viví la despedida de Lionel Messi en el Estadio Monumental. Traslado desde Tucumán + entrada al partido. 8 cuotas sin interés con Tarjeta Sucrédito.">
+  <title>Messi: La Despedida | Sucrédito</title>
+  <style>
+    :root{
+      --yellow:#fff000;
+      --red:#ed1c24;
+      --blue:#168fc1;
+      --dark:#101010;
+      --green:#25d366;
+      --white:#fff;
+      --gray:#f5f5f5;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--dark);
+      background:#fff;
+    }
+    a{text-decoration:none;color:inherit}
+    .topbar{
+      background:var(--dark);
+      color:#fff;
+      text-align:center;
+      padding:10px 16px;
+      font-weight:800;
+      font-size:14px;
+      letter-spacing:.3px;
+    }
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid #eee;
+    }
+    .nav{
+      max-width:1180px;
+      margin:auto;
+      min-height:72px;
+      padding:12px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      min-height:42px;
+    }
+    .brand img{
+      display:block;
+      width:auto;
+      height:48px;
+      max-width:190px;
+      object-fit:contain;
+    }
+    .nav-cta{
+      background:var(--red);
+      color:#fff;
+      padding:12px 22px;
+      border-radius:999px;
+      font-weight:900;
+      transition:.2s;
+    }
+    .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 20px #ed1c2430}
+
+    .hero{
+      background:linear-gradient(180deg,#fff 0%,#fff 75%,var(--yellow) 75%,var(--yellow) 100%);
+      padding:28px 18px 55px;
+    }
+    .hero-inner{max-width:1180px;margin:auto}
+    .promo-card{
+      overflow:hidden;
+      border-radius:24px;
+      box-shadow:0 18px 50px #00000020;
+      background:#fff;
+    }
+    .promo-card img{display:block;width:100%;height:auto}
+
+    .hero-actions{
+      display:flex;
+      justify-content:center;
+      margin-top:-30px;
+      position:relative;
+      z-index:3;
+    }
+    .main-cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      background:var(--green);
+      color:#fff;
+      font-size:20px;
+      font-weight:900;
+      padding:18px 34px;
+      border-radius:999px;
+      box-shadow:0 12px 30px #00000025;
+      transition:.2s;
+    }
+    .main-cta:hover{transform:translateY(-3px);box-shadow:0 16px 35px #00000030}
+    .wa-icon{font-size:24px}
+
+    .section{padding:70px 18px}
+    .section.yellow{background:var(--yellow)}
+    .container{max-width:1050px;margin:auto}
+    .section-title{text-align:center;font-size:38px;line-height:1.05;margin:0 0 14px;font-weight:950;letter-spacing:-1px}
+    .section-subtitle{text-align:center;max-width:700px;margin:0 auto 38px;font-size:18px;line-height:1.5;color:#444}
+
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      background:#fff;
+      border-radius:20px;
+      padding:28px 22px;
+      text-align:center;
+      box-shadow:0 8px 25px #00000012;
+    }
+    .card .icon{font-size:34px;margin-bottom:12px}
+    .card h3{margin:0 0 8px;font-size:21px}
+    .card p{margin:0;color:#555;line-height:1.45}
+
+    .offer{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:25px;
+      align-items:stretch;
+    }
+    .offer-box{border-radius:22px;padding:35px;background:#fff;box-shadow:0 8px 25px #00000012}
+    .offer-box.dark{background:var(--dark);color:#fff}
+    .offer-box h3{font-size:30px;margin:0 0 12px}
+    .offer-box p{font-size:18px;line-height:1.55;margin:0}
+    .installments{font-size:52px;font-weight:950;color:var(--red);line-height:1;margin:15px 0 5px}
+    .installments small{font-size:21px;color:var(--dark)}
+    .dark .installments{color:var(--yellow)}
+    .dark .installments small{color:#fff}
+
+    .buy{
+      background:var(--blue);
+      color:#fff;
+      padding:70px 18px;
+      text-align:center;
+    }
+    .buy h2{font-size:42px;line-height:1.05;margin:0 0 15px;font-weight:950}
+    .buy p{font-size:19px;max-width:650px;margin:0 auto 28px;line-height:1.5}
+    .buy-button{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:#fff;
+      color:#111;
+      font-size:21px;
+      font-weight:950;
+      padding:18px 30px;
+      border-radius:999px;
+      box-shadow:0 10px 25px #00000020;
+    }
+    .number{display:block;margin-top:18px;font-weight:800;font-size:16px}
+
+    footer{background:#111;color:#fff;text-align:center;padding:35px 18px 90px}
+    footer .brand{font-size:24px;margin-bottom:10px}
+    footer p{margin:6px 0;color:#bbb;font-size:14px}
+
+    .floating{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      z-index:30;
+      background:var(--green);
+      color:#fff;
+      width:62px;height:62px;
+      border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      font-size:30px;
+      box-shadow:0 8px 25px #00000035;
+    }
+
+    @media(max-width:800px){
+      .nav{min-height:62px}
+      .brand img{height:40px;max-width:155px}
+      .nav-cta{padding:10px 15px;font-size:14px}
+      .hero{padding:15px 10px 42px}
+      .promo-card{border-radius:15px}
+      .main-cta{font-size:17px;padding:15px 25px}
+      .cards,.offer{grid-template-columns:1fr}
+      .section{padding:52px 15px}
+      .section-title{font-size:31px}
+      .buy h2{font-size:34px}
+    }
+    @media(max-width:480px){
+      .topbar{font-size:12px}
+      .nav-cta{font-size:12px}
+      .hero-actions{margin-top:-24px}
+      .main-cta{width:calc(100% - 20px)}
+      .buy-button{width:100%;justify-content:center;font-size:18px}
+      .floating{width:56px;height:56px;right:14px;bottom:14px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">MESSI · LA DESPEDIDA · ESTADIO MONUMENTAL</div>
+
+  <header>
+    <nav class="nav">
+      <div class="brand">
+        <img src="logo-sucredito.png" alt="Sucrédito">
+      </div>
+      <a class="nav-cta" href="https://wa.me/5493814028078?text=Hola%2C%20quiero%20comprar%20el%20paquete%20para%20la%20despedida%20de%20Messi%20con%20Sucr%C3%A9dito." target="_blank" rel="noopener">COMPRAR AHORA</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="promo-card">
+          <img src="assets/promo.jpg" alt="Messi: La despedida. Traslado desde Tucumán y entrada al partido. 8 cuotas sin interés con Sucrédito.">
+        </div>
+        <div class="hero-actions">
+          <a class="main-cta" href="https://wa.me/5493814028078?text=Hola%2C%20quiero%20comprar%20el%20paquete%20para%20la%20despedida%20de%20Messi%20con%20Sucr%C3%A9dito." target="_blank" rel="noopener">
+            <span class="wa-icon">◉</span> QUIERO MI ENTRADA
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">UNA DESPEDIDA PARA VIVIRLA EN GRANDE</h2>
+        <p class="section-subtitle">El último capítulo de Messi con la Selección en el Monumental. Armá tu viaje desde Tucumán y viví el partido.</p>
+        <div class="cards">
+          <article class="card">
+            <div class="icon">🏟️</div>
+            <h3>Entrada al partido</h3>
+            <p>Accedé al encuentro de Argentina frente a Benín en el Estadio Monumental.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🚌</div>
+            <h3>Traslado desde Tucumán</h3>
+            <p>El paquete incluye traslado desde Tucumán para que solo te ocupes de disfrutar.</p>
+          </article>
+          <article class="card">
+            <div class="icon">💳</div>
+            <h3>8 cuotas sin interés</h3>
+            <p>Comprá con tu Tarjeta Sucrédito y pagá en 8 cuotas sin interés.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section yellow">
+      <div class="container">
+        <h2 class="section-title">TODO LISTO PARA EL 5 DE OCTUBRE</h2>
+        <p class="section-subtitle">Salida desde Tucumán. Tu entrada, tu traslado y una experiencia que no se repite.</p>
+        <div class="offer">
+          <div class="offer-box">
+            <h3>📅 Fecha</h3>
+            <p><strong>5 de octubre</strong><br>Salida desde Tucumán.</p>
+            <div class="installments">8 <small>CUOTAS SIN INTERÉS</small></div>
+          </div>
+          <div class="offer-box dark">
+            <h3>📲 ¿Querés comprar?</h3>
+            <p>Hacé clic y hablá directamente por WhatsApp con el contacto de venta.</p>
+            <br>
+            <a class="main-cta" style="background:#25d366;color:#fff" href="https://wa.me/5493814028078?text=Hola%2C%20quiero%20informaci%C3%B3n%20y%20comprar%20el%20paquete%20para%20la%20despedida%20de%20Messi." target="_blank" rel="noopener">HABLAR POR WHATSAPP</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="buy">
+      <div class="container">
+        <h2>¿TE LO VAS A PERDER?</h2>
+        <p>Consultá disponibilidad y comprá tu paquete directamente por WhatsApp.</p>
+        <a class="buy-button" href="https://wa.me/5493814028078?text=Hola%2C%20quiero%20comprar%20el%20paquete%20para%20la%20despedida%20de%20Messi.%20Me%20pasan%20disponibilidad%20y%20precio%3F" target="_blank" rel="noopener">💬 COMPRAR POR WHATSAPP</a>
+        <span class="number">WhatsApp: 381 402 8078</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand">
+      <img src="logo-sucredito.png" alt="Sucrédito">
+    </div>
+    <p>Promoción sujeta a disponibilidad y condiciones del organizador.</p>
+    <p>La compra se gestiona directamente por WhatsApp.</p>
+  </footer>
+
+  <a class="floating" href="https://wa.me/5493814028078?text=Hola%2C%20quiero%20comprar%20el%20paquete%20para%20la%20despedida%20de%20Messi." target="_blank" rel="noopener" aria-label="Comprar por WhatsApp">◉</a>
+</body>
+</html>
